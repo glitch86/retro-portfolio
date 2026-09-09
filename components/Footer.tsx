@@ -19,7 +19,7 @@ export default function Footer() {
       </motion.footer>
 
       {/* Persistent Ko-fi badge — safe on all screen sizes */}
-      <motion.a
+      {/* <motion.a
         href="https://ko-fi.com"
         target="_blank"
         rel="noreferrer"
@@ -32,7 +32,7 @@ export default function Footer() {
       >
         <span>☕</span>
         <span>$ KO-FI</span>
-      </motion.a>
+      </motion.a> */}
     </>
   );
 }

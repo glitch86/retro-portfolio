@@ -3,7 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
-  title: "Layba — Portfolio",
+  title: "Roza // Software Engineer",
   description:
     "Full-stack developer who builds aesthetic digital experiences. Open to freelance opportunities.",
 };
