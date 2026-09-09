@@ -63,12 +63,10 @@ export default function HeroSection() {
             pauseDuration={2000}
             showCursor
             cursorCharacter="_"
-            // deletingSpeed={50}
-            // variableSpeedEnabled={false}
-            // variableSpeedMin={60}
-            // variableSpeedMax={120}
             cursorBlinkDuration={0.6}
             loop={false}
+            variableSpeed={false}
+            onSentenceComplete={() => {}}
           />
         </motion.h1>
 

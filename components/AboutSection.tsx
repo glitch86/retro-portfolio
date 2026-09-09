@@ -58,7 +58,7 @@ export default function AboutSection() {
             <div className="relative group">
               <div className="w-36 h-36 sm:w-44 sm:h-44 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-2xl overflow-hidden border-2 border-[rgba(255,183,213,0.5)] shadow-[0_0_20px_rgba(255,183,213,0.25)] bg-[#191924]">
                 <Image
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtiQQc7VrGHzYLqhpvXBlj2e9nb6cPAtq8HzrE7f_KottnZ1nnEV73M1dChNj3FeC49_7rbMXYZuulTdLaUslrbu8OdJD5KmnbwsPYUUy8mvrw-QaOsNHRUYAA-uxYt2J7qmpTy-RKsrLTPKe4cAM7vwg9E8P4k4RGP-oBO49HjYGe3sLMes9Q_SVWpkHfpGVD3d-08raNaAFEU9fLPH4O6Z9FMf3zNJUx2GmKWuR0afWCwkQYPsIld8UCJKkeGo4xbw"
+                  src={"/images/user.png"}
                   alt="Layba Profile"
                   width={192}
                   height={192}

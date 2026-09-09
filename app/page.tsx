@@ -24,6 +24,7 @@ export default function Home() {
           alphaParticles
           disableRotation={false}
           pixelRatio={1}
+          className={""}
         />
       </div>
 
