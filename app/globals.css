@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@400;500;600;700&family=VT323&display=swap");
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* ── Custom theme tokens (Tailwind v4 @theme) ───────────────────────────── */
+@theme inline {
+  /* Sakura palette */
+  --color-sakura-light:   #ffe4ee;
+  --color-sakura:         #ffb7d5;
+  --color-sakura-hover:   #fca5cb;
+  --color-sakura-dark:    #e08cae;
+  --color-sakura-glow:    rgba(255, 183, 213, 0.4);
+
+  /* Void / dark palette */
+  --color-void-bg:        #0c0c0f;
+  --color-void-card:      #141419;
+  --color-void-card2:     #1b1b22;
+  --color-void-border:    #2a2a38;
+  --color-void-borderPink: rgba(255, 183, 213, 0.25);
+
+  /* Fonts */
+  --font-pixel: "Press Start 2P", monospace;
+  --font-vt:    "VT323", monospace;
+  --font-sans:  "Space Grotesk", sans-serif;
+  --font-mono:  "Space Grotesk", monospace;
+
+  /* Custom breakpoints */
+  --breakpoint-xs: 480px;
+}
+
+/* ── Base reset & body ───────────────────────────────────────────────────── */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #010101;
+    /* background-image:
+      radial-gradient(rgba(255, 183, 213, 0.12) 1px, transparent 1px),
+      radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px); */
+    background-size: 36px 36px, 18px 18px;
+    background-position: 0 0, 9px 9px;
+    color: #e2e2ec;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: #ffb7d5;
+    color: #000;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar        { width: 8px; }
+  ::-webkit-scrollbar-track  { background: #0c0c0f; }
+  ::-webkit-scrollbar-thumb  { background: #2a2a38; border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: #ffb7d5; }
+}
+
+/* ── Utility / component classes ─────────────────────────────────────────── */
+@layer components {
+
+  /* Pixel 3-D extrusion text shadow — smaller on mobile, full size on sm+ */
+  .pixel-extrusion {
+    text-shadow:
+      2px 2px 0px #b05c82,
+      4px 4px 0px #632d43;
+  }
+
+  @media (min-width: 640px) {
+    .pixel-extrusion {
+      text-shadow:
+        3px 3px 0px #b05c82,
+        6px 6px 0px #632d43,
+        9px 9px 0px #240c16;
+    }
+  }
+
+  /* Retro pixel-art push buttons */
+  .btn-pixel {
+    box-shadow: 3px 3px 0px #ffb7d5;
+    transition: all 0.15s ease;
+  }
+  .btn-pixel:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0px #ffb7d5;
+  }
+  .btn-pixel:active {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0px #ffb7d5;
+  }
+
+  /* Floating pill navbar shell */
+  .floating-nav-pill {
+    background: rgba(18, 17, 23, 0.88);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 183, 213, 0.28);
+    box-shadow:
+      0 10px 30px -5px rgba(0, 0, 0, 0.8),
+      0 0 20px -3px rgba(255, 183, 213, 0.15);
+  }
+
+  /* Pill CTA button inside navbar */
+  .nav-cta-pill {
+    background: #ffb7d5;
+    color: #121117;
+    box-shadow: 0 0 16px rgba(255, 183, 213, 0.45);
+    transition: all 0.2s ease;
+  }
+  .nav-cta-pill:hover {
+    background: #ffffff;
+    color: #0c0c0f;
+    box-shadow: 0 0 22px rgba(255, 255, 255, 0.6);
+    transform: scale(1.02);
+  }
+}
