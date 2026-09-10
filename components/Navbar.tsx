@@ -21,7 +21,7 @@ export default function Navbar() {
         initial={{ y: -80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
-        className="floating-nav-pill pointer-events-auto rounded-full px-2.5 py-1.5 sm:px-4 sm:py-2.5 flex items-center justify-between gap-2 sm:gap-4 max-w-4xl w-/6 min-w-0"
+        className="floating-nav-pill bg-radial-[at_top_right] from-pink-400/20 backdrop-blur-2xl pointer-events-auto rounded-full px-2.5 py-1.5 sm:px-4 sm:py-2.5 flex items-center justify-between gap-2 sm:gap-4 max-w-4xl w-/6 min-w-0"
       >
         {/* Logo */}
         <a
