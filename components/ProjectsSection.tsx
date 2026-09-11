@@ -119,7 +119,7 @@ export default function ProjectsSection() {
             }}
             whileTap={{ scale: 0.97 }}
             transition={{ type: "spring", stiffness: 260, damping: 22 }}
-            className="group block border border-[rgba(255,183,213,0.2)] bg-[#121218] p-4 sm:p-5 md:p-6 rounded-xl text-center"
+            className="group block border border-[rgba(255,183,213,0.2)] backdrop-blur-2xl p-4 sm:p-5 md:p-6 rounded-xl text-center"
           >
             <motion.div
               whileHover={{ scale: 1.1, rotate: -2 }}

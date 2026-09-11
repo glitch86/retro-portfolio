@@ -5,19 +5,19 @@ import { motion } from "framer-motion";
 const skills = [
   {
     label: "FRONTEND",
-    items: "React, TypeScript, Next.js, Angular, Tailwind, HTML5/CSS3",
+    items: "React, TypeScript, Next.js, Tailwind, HTML5/CSS3",
   },
   {
     label: "BACKEND",
-    items: "Java, Spring Boot, Node.js, Python, REST APIs, C# / C++",
+    items: "Java, Node.js, Python, REST APIs, C# / C++",
   },
   {
     label: "DATABASE",
-    items: "PostgreSQL, MySQL, Redis, MongoDB, Supabase",
+    items: "PostgreSQL, MySQL, Redis, MongoDB",
   },
   {
     label: "DEVOPS",
-    items: "Docker, Git/GitHub, Linux/CLI, Vercel, CI/CD",
+    items: "Docker, Git/GitHub, Vercel, CI/CD",
   },
 ] as const;
 
@@ -84,7 +84,7 @@ export default function SkillsSection() {
             variants={cardVariant}
             whileHover={{ scale: 1.03, borderColor: "#ffb7d5" }}
             transition={{ type: "spring", stiffness: 280, damping: 22 }}
-            className="border border-[rgba(255,183,213,0.25)] bg-[#121218] p-3 sm:p-4 rounded"
+            className="border border-[rgba(255,183,213,0.25)] backdrop-blur-2xl p-3 sm:p-4 rounded"
           >
             <span className="font-[family-name:var(--font-pixel)] text-[9px] sm:text-[10px] text-[#ffb7d5] block mb-1.5">
               {label}

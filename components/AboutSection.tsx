@@ -46,7 +46,6 @@ export default function AboutSection() {
         </div>
 
         <div className="p-5 sm:p-8 lg:p-10 flex flex-col md:flex-row gap-6 sm:gap-8 lg:gap-12 items-start">
-
           {/* Avatar */}
           <motion.div
             variants={scaleIn}
@@ -79,7 +78,9 @@ export default function AboutSection() {
           <motion.div
             variants={{
               hidden: {},
-              show: { transition: { staggerChildren: 0.1, delayChildren: 0.2 } },
+              show: {
+                transition: { staggerChildren: 0.1, delayChildren: 0.2 },
+              },
             }}
             initial="hidden"
             whileInView="show"
@@ -98,29 +99,50 @@ export default function AboutSection() {
               className="space-y-2.5 sm:space-y-3 font-mono text-sm sm:text-sm md:text-base text-[#cfcfde] leading-relaxed"
             >
               <p>
-                I&apos;m Layba, a full-stack developer who likes building things that are both functional and beautiful.
+                I'm Roza, a software engineering student who enjoys building
+                practical solutions and understanding how they work under the
+                hood.
               </p>
+
               <p>
-                On the frontend, I work with React, Angular, TypeScript, and Bootstrap; on the backend, Java, Spring Boot, Node.js, and Python. I&apos;m also comfortable with C# and C++, with a strong OOP foundation that carries over to everything. I design RESTful APIs, work with PostgreSQL and MySQL, and lean on Git and Docker to keep projects organized and deployable.
+                I'm currently focused on{" "}
+                <strong>ASP.NET Core and backend development</strong>, with
+                experience across React, Next.js, Node.js, MongoDB, and SQL
+                databases. This full-stack background helps me approach
+                applications from both the frontend and backend perspectives.
               </p>
+
               <p className="text-[#a0a0b2]">
-                Tutoring taught me to break down hard problems and explain them clearly, which makes me a better developer. I care a lot about the user experience and getting the details right.
+                Beyond web development, I'm exploring{" "}
+                <strong>
+                  Machine Learning, Cyber Security, and Space Technology
+                </strong>
+                , including research into DDoS detection for EV charging
+                infrastructure. My goal is to build strong fundamentals and
+                become an engineer who can understand problems deeply and
+                develop reliable, well-structured solutions.
               </p>
-              <p>
-                I&apos;m open to freelance work right now. Website, web app, or something custom, I&apos;d love to help.
-              </p>
+
+              {/* <p>
+                I&apos;m open to freelance work right now. Website, web app, or
+                something custom, I&apos;d love to help.
+              </p> */}
               <p className="text-xs text-[rgba(255,183,213,0.8)] pt-1 italic">
-                Outside of coding, you&apos;ll find me with my cats, keeping up with fashion and beauty, or hunting for good Thai food — usually with a coffee or matcha in hand.
+                Outside of coding, you&apos;ll find me keeping up with fashion,
+                or playing at NASA's pubic APIs.
               </p>
             </motion.div>
 
             {/* Badges */}
-            <motion.div variants={fadeUp} className="flex flex-wrap gap-2 sm:gap-2.5 pt-3 sm:pt-4">
+            <motion.div
+              variants={fadeUp}
+              className="flex flex-wrap gap-2 sm:gap-2.5 pt-3 sm:pt-4"
+            >
               <span className="font-[family-name:var(--font-pixel)] text-[8px] sm:text-[9px] md:text-[10px] border border-[rgba(255,183,213,0.4)] text-[#ffb7d5] bg-[rgba(255,183,213,0.1)] px-2.5 sm:px-3 py-1 sm:py-1.5 rounded leading-tight">
-                OPEN TO FREELANCE OPPORTUNITIES
+                OPEN TO REMOTE OPPORTUNITIES
               </span>
               <span className="font-[family-name:var(--font-pixel)] text-[8px] sm:text-[9px] md:text-[10px] border border-[rgba(255,183,213,0.4)] text-[#ffb7d5] bg-[rgba(255,183,213,0.1)] px-2.5 sm:px-3 py-1 sm:py-1.5 rounded leading-tight">
-                FULL STACK DEVELOPER
+                FULL STACK ENGINEER
               </span>
             </motion.div>
           </motion.div>

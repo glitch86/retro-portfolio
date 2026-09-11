@@ -33,7 +33,7 @@ export default function Navbar() {
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
             className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#ffb7d5] flex items-center justify-center text-[#121117] font-[family-name:var(--font-pixel)] text-sm sm:text-base font-bold shadow-[0_0_12px_rgba(255,183,213,0.5)] shrink-0"
           >
-            L
+            R
           </motion.div>
           <span
             className="font-[family-name:var(--font-pixel)] text-[10px] sm:text-[11px] text-[#ffb7d5] hidden lg:inline tracking-wider group-hover:text-white transition-colors"
@@ -42,7 +42,7 @@ export default function Navbar() {
               setActive("");
             }}
           >
-            LAYBA.DEV
+            ROZA.DEV
           </span>
         </a>
 
@@ -106,7 +106,7 @@ export default function Navbar() {
             className="hidden sm:inline text-xs sm:text-sm font-semibold tracking-wide truncate max-w-[130px] md:max-w-none"
             onClick={handleClick}
           >
-            layba.dev@gmail.com
+            tahsinroza10@gmail.com
           </span>
         </a>
       </motion.nav>

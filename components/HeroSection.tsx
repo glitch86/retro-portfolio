@@ -48,7 +48,7 @@ export default function HeroSection() {
           className="inline-flex items-center gap-2 text-[#ffb7d5] font-[family-name:var(--font-pixel)] text-[10px] sm:text-xs md:text-sm tracking-widest uppercase mb-1 sm:mb-2"
         >
           <span className="animate-pulse">✦</span>
-          <span>HI I&apos;M LAYBA</span>
+          <span>HI I&apos;M ROZA</span>
           <span className="animate-pulse">✦</span>
         </motion.div>
 
@@ -84,16 +84,17 @@ export default function HeroSection() {
           className="flex flex-col xs:flex-row flex-wrap items-center justify-center gap-3 sm:gap-4 pt-1 sm:pt-2"
         >
           <a
-            href="#projects"
+            href="https://drive.google.com/file/d/1kjRz9U9Zetf_AzOYLyHS5fR2lJucIsxO/view?usp=drivesdk"
+            target="_blank"
             className="btn-pixel inline-block font-[family-name:var(--font-pixel)] text-[10px] sm:text-xs md:text-sm bg-linear-to-b from-[#ffb7d5]/20  text-[#ffb7d5] border-2 border-[#ffb7d5] px-5 sm:px-6 py-3 sm:py-3.5 uppercase tracking-wider w-full xs:w-auto"
           >
-            View My Work
+            View Resume
           </a>
           <a
             href="#contact"
             className="btn-pixel inline-block font-[family-name:var(--font-pixel)] text-[10px] sm:text-xs md:text-sm bg-linear-to-b from-[#ffb7d5]/20 text-[#ffb7d5] border-2 border-[#ffb7d5] px-5 sm:px-6 py-3 sm:py-3.5 uppercase tracking-wider font-bold w-full xs:w-auto"
           >
-            Work With Me
+            Get in touch
           </a>
         </motion.div>
 
@@ -104,7 +105,8 @@ export default function HeroSection() {
         >
           {/* Email */}
           <motion.a
-            href="mailto:layba.dev@gmail.com"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=tahsinroza10@gmail.com"
+            target="_blank"
             title="Email"
             whileHover={{ scale: 1.15 }}
             whileTap={{ scale: 0.95 }}
@@ -124,7 +126,7 @@ export default function HeroSection() {
 
           {/* LinkedIn */}
           <motion.a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/tahsin-roza"
             target="_blank"
             rel="noreferrer"
             title="LinkedIn"
@@ -144,7 +146,7 @@ export default function HeroSection() {
 
           {/* Instagram */}
           <motion.a
-            href="https://instagram.com"
+            href="https://instagram.com/merely_mimosa"
             target="_blank"
             rel="noreferrer"
             title="Instagram"
@@ -168,7 +170,7 @@ export default function HeroSection() {
 
           {/* GitHub */}
           <motion.a
-            href="https://github.com"
+            href="https://github.com/roza70"
             target="_blank"
             rel="noreferrer"
             title="GitHub"
