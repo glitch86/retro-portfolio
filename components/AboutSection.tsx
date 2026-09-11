@@ -58,7 +58,7 @@ export default function AboutSection() {
               <div className="w-36 h-36 sm:w-44 sm:h-44 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-2xl overflow-hidden border-2 border-[rgba(255,183,213,0.5)] shadow-[0_0_20px_rgba(255,183,213,0.25)] bg-[#191924]">
                 <Image
                   src={"/images/user.png"}
-                  alt="Layba Profile"
+                  alt="roza Profile"
                   width={192}
                   height={192}
                   className="w-full h-full object-cover object-top contrast-105 group-hover:scale-105 transition-transform duration-300"
@@ -70,7 +70,7 @@ export default function AboutSection() {
               </div>
             </div>
             <p className="font-[family-name:var(--font-pixel)] text-[9px] sm:text-[10px] text-[#ffb7d5] mt-5 text-center tracking-wider">
-              LAYBA // DEV
+              ROZA // DEV
             </p>
           </motion.div>
 
@@ -99,7 +99,7 @@ export default function AboutSection() {
               className="space-y-2.5 sm:space-y-3 font-mono text-sm sm:text-sm md:text-base text-[#cfcfde] leading-relaxed"
             >
               <p>
-                I'm Roza, a software engineering student who enjoys building
+                I'm Roza, a CS student who enjoys building
                 practical solutions and understanding how they work under the
                 hood.
               </p>
@@ -117,8 +117,7 @@ export default function AboutSection() {
                 <strong>
                   Machine Learning, Cyber Security, and Space Technology
                 </strong>
-                , including research into DDoS detection for EV charging
-                infrastructure. My goal is to build strong fundamentals and
+                My goal is to build strong fundamentals and
                 become an engineer who can understand problems deeply and
                 develop reliable, well-structured solutions.
               </p>

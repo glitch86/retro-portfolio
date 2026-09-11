@@ -12,7 +12,7 @@ export default function Footer() {
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         className="py-10 sm:py-12 px-4 text-center text-[10px] sm:text-xs font-mono text-[#68687a] border-t border-[#1a1a24] mt-12 sm:mt-16"
       >
-        <p>© 2025 Layba.dev — Designed with Terminal Sakura aesthetic.</p>
+        <p>© 2025 ROZA.dev — Designed with Terminal Sakura aesthetic.</p>
         <p className="text-[9px] sm:text-[10px] text-[rgba(255,183,213,0.6)] mt-1">
           Built with Next.js, Tailwind &amp; Terminal Nostalgia
         </p>
