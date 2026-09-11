@@ -11,28 +11,17 @@ interface Project {
 
 const projects: Project[] = [
   {
-    name: "LAYBA.DEV",
-    tag: "THIS SITE",
+    name: "BudgetIQ",
+    tag: "Finance Dashboard",
     tagStyle:
       "border border-[rgba(255,183,213,0.4)] text-[#ffb7d5] bg-[rgba(255,183,213,0.1)]",
     href: "#projects",
   },
   {
-    name: "3LI3LI",
-    tag: "02 // WEB APP",
-    tagStyle: "text-[#8c8c9e]",
-    href: "#projects",
-  },
-  {
-    name: "THEMICHIFERQUEEN",
-    tag: "03 // BRANDING",
-    tagStyle: "text-[#8c8c9e]",
-    href: "#projects",
-  },
-  {
-    name: "MOONFADE",
-    tag: "04 // UI/UX",
-    tagStyle: "text-[#8c8c9e]",
+    name: "✦ Lumière Jewels",
+    tag: "pinteresty jewelery shop",
+    tagStyle:
+      "border border-[rgba(255,183,213,0.4)] text-[#ffb7d5] bg-[rgba(255,183,213,0.1)]",
     href: "#projects",
   },
 ];
@@ -92,10 +81,11 @@ export default function ProjectsSection() {
         className="mb-8 sm:mb-10"
       >
         <h2 className="font-[family-name:var(--font-pixel)] text-base sm:text-xl md:text-2xl text-[#ffb7d5] tracking-tight">
-          &gt; THINGS I&apos;VE BUILT.
+          &gt; Selected Archive.
         </h2>
         <p className="font-mono text-[10px] sm:text-xs md:text-sm text-[#8c8c9e] uppercase tracking-wider mt-1">
-          Personal projects and freelance client work. Click a folder to open it.
+          Personal projects and freelance client work. Click a folder to open
+          it.
         </p>
       </motion.div>
 
@@ -105,7 +95,7 @@ export default function ProjectsSection() {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.15 }}
-        className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6"
+        className="flex items-center justify-center sm:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6"
       >
         {projects.map((project) => (
           <motion.a
@@ -119,7 +109,7 @@ export default function ProjectsSection() {
             }}
             whileTap={{ scale: 0.97 }}
             transition={{ type: "spring", stiffness: 260, damping: 22 }}
-            className="group block border border-[rgba(255,183,213,0.2)] backdrop-blur-2xl p-4 sm:p-5 md:p-6 rounded-xl text-center"
+            className="group block border w-60 border-[rgba(255,183,213,0.2)] backdrop-blur-2xl p-4 sm:p-5 md:p-6 rounded-xl text-center"
           >
             <motion.div
               whileHover={{ scale: 1.1, rotate: -2 }}
