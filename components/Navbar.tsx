@@ -82,7 +82,8 @@ export default function Navbar() {
 
         {/* CTA — full email on sm+, icon-only on mobile */}
         <a
-          href="mailto:layba.dev@gmail.com"
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=tahsinroza10@gmail.com"
+          target="_blank"
           className="nav-cta-pill rounded-full shrink-0 flex items-center justify-center gap-1.5 transition-all
             w-8 h-8 sm:w-auto sm:h-auto sm:px-4 sm:py-2 md:px-5"
           title="Email me"
