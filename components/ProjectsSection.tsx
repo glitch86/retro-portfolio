@@ -70,7 +70,7 @@ function FolderIcon() {
 export default function ProjectsSection() {
   return (
     <section
-      id="projects"
+      id="Projects"
       className="py-14 sm:py-20 px-4 sm:px-8 max-w-5xl mx-auto scroll-mt-20 sm:scroll-mt-24"
     >
       <motion.div

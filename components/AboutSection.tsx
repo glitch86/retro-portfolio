@@ -24,7 +24,7 @@ const scaleIn = {
 export default function AboutSection() {
   return (
     <section
-      id="about"
+      id="About"
       className="py-14 sm:py-20 px-4 sm:px-8 max-w-5xl mx-auto scroll-mt-20 sm:scroll-mt-24 "
     >
       {/* Retro terminal window */}

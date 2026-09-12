@@ -33,7 +33,7 @@ const fadeIn = {
 export default function HeroSection() {
   return (
     <section
-      id="hero"
+      id="Hero"
       className="min-h-[90vh] sm:min-h-[85vh] flex flex-col items-center justify-center text-center px-4 py-12 sm:py-16 relative overflow-hidden"
     >
       <motion.div

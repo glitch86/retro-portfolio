@@ -18,10 +18,8 @@ export default function Footer() {
         </p>
       </motion.footer>
 
-      {/* Persistent Ko-fi badge — safe on all screen sizes */}
       {/* <motion.a
-        href="https://ko-fi.com"
-        target="_blank"
+        href="#hero"
         rel="noreferrer"
         initial={{ opacity: 0, x: 60 }}
         animate={{ opacity: 1, x: 0 }}

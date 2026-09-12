@@ -52,7 +52,7 @@ const headerVariant = {
 export default function SkillsSection() {
   return (
     <section
-      id="skills"
+      id="Skills"
       className="py-12 sm:py-14 px-4 sm:px-8 max-w-5xl mx-auto scroll-mt-20 sm:scroll-mt-24"
     >
       <motion.div

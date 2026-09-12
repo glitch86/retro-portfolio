@@ -30,7 +30,7 @@ export default function ContactSection() {
 
   return (
     <section
-      id="contact"
+      id="Contact"
       className="py-14 sm:py-20 px-4 sm:px-8 max-w-3xl mx-auto scroll-mt-20 sm:scroll-mt-24"
     >
       

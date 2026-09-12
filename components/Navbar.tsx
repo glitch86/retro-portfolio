@@ -48,7 +48,7 @@ export default function Navbar() {
 
         {/* Center links */}
         <div className="grid grid-cols-4 text-center items-center gap-0.5 sm:gap-3 md:gap-6 min-w-0">
-          {["about", "skills", "projects", "contact"].map((section) => (
+          {["About", "Skills", "Projects", "Contact"].map((section) => (
             <a
               key={section}
               href={`#${section}`}
@@ -74,7 +74,8 @@ export default function Navbar() {
                 </>
               )}
               <span className="relative z-10">
-                {section.charAt(0).toUpperCase() + section.slice(1)}
+                {/* {section.charAt(0).toUpperCase() + section.slice(1)} */}
+                {section}
               </span>
             </a>
           ))}
