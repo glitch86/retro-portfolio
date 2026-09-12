@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
+import LetterSwapPingPong from "./fancy/text/letter-swap-pingpong-anim";
 
 export default function Navbar() {
   const [active, setActive] = useState("");
@@ -16,7 +17,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className="fixed top-3 sm:top-5 inset-x-0 z-50 flex justify-center px-3 sm:px-4 pointer-events-none">
+    <header className="fixed top-3 sm:top-5 inset-x-0 z-50 flex justify-center px-3 sm:px-4  pointer-events-none">
       <motion.nav
         initial={{ y: -80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -31,7 +32,7 @@ export default function Navbar() {
           <motion.div
             whileHover={{ scale: 1.08 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
-            className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#ffb7d5] flex items-center justify-center text-[#121117] font-[family-name:var(--font-pixel)] text-sm sm:text-base font-bold shadow-[0_0_12px_rgba(255,183,213,0.5)] shrink-0"
+            className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#ffb7d5] flex items-center justify-center text-[#121117] font-[family-name:var(--font-pixel)] text-sm sm:text-base font-bold shadow-[0_7_12px_rgba(255,183,213,0.5)] shrink-0"
           >
             R
           </motion.div>
@@ -75,7 +76,12 @@ export default function Navbar() {
               )}
               <span className="relative z-10">
                 {/* {section.charAt(0).toUpperCase() + section.slice(1)} */}
-                {section}
+                <LetterSwapPingPong
+                  label={section}
+                  staggerFrom={"first"}
+                  reverse={false}
+                  className="font-overused-grotesk font-bold"
+                />
               </span>
             </a>
           ))}

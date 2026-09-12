@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { Separator } from "./ui/separator";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -94,14 +95,20 @@ export default function AboutSection() {
               &gt; PROFILE
             </motion.h2>
 
+            {/* Descripton about self */}
             <motion.div
               variants={fadeUp}
               className="space-y-2.5 sm:space-y-3 font-mono text-sm sm:text-sm md:text-base text-[#cfcfde] leading-relaxed"
             >
+
+
+              {/* About me */}
+              <h3 className="font-semibold text-xl text-[#ffb7b5] underline ">
+                About Me
+              </h3>
               <p>
-                I'm Roza, a CS student who enjoys building
-                practical solutions and understanding how they work under the
-                hood.
+                I'm Roza, a CS student who enjoys building practical solutions
+                and understanding how they work under the hood.
               </p>
 
               <p>
@@ -112,15 +119,32 @@ export default function AboutSection() {
                 applications from both the frontend and backend perspectives.
               </p>
 
+
+              {/* interests */}
+              <div className="divider"></div>
+              <h3 className="font-semibold text-xl text-[#ffb7b5] underline ">
+                Interests
+              </h3>
               <p className="text-[#a0a0b2]">
                 Beyond web development, I'm exploring{" "}
                 <strong>
-                  Machine Learning, Cyber Security, and Space Technology
+                  Machine Learning, Cyber Security, and working AI agents .{" "}
                 </strong>
-                My goal is to build strong fundamentals and
-                become an engineer who can understand problems deeply and
-                develop reliable, well-structured solutions.
+                My goal is to build strong fundamentals and become an engineer
+                who can understand problems deeply and develop reliable,
+                well-structured solutions.
               </p>
+
+
+              {/* hobbies */}
+              <h3 className="font-semibold text-xl text-[#ffb7b5] underline ">
+                Hobbies
+              </h3>
+              <div className="divider"></div>
+              <p>
+              Aside from all that, on weekends I like to sit back and go through my list of unwatched movies and series or read some books. ^_^
+              </p>
+
 
               {/* <p>
                 I&apos;m open to freelance work right now. Website, web app, or
@@ -128,7 +152,7 @@ export default function AboutSection() {
               </p> */}
               <p className="text-xs text-[rgba(255,183,213,0.8)] pt-1 italic">
                 Outside of coding, you&apos;ll find me keeping up with fashion,
-                or playing at NASA's pubic APIs.
+                or playing at NASA's public APIs.
               </p>
             </motion.div>
 
