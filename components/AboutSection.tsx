@@ -100,8 +100,6 @@ export default function AboutSection() {
               variants={fadeUp}
               className="space-y-2.5 sm:space-y-3 h-80 overflow-auto font-mono text-sm sm:text-sm md:text-base text-[#cfcfde] leading-relaxed"
             >
-
-
               {/* About me */}
               <h3 className="font-semibold text-xl text-[#ffb7b5] underline ">
                 About Me
@@ -119,7 +117,6 @@ export default function AboutSection() {
                 applications from both the frontend and backend perspectives.
               </p>
 
-
               {/* interests */}
               <div className="divider"></div>
               <h3 className="font-semibold text-xl text-[#ffb7b5] underline ">
@@ -135,16 +132,16 @@ export default function AboutSection() {
                 well-structured solutions.
               </p>
 
-
               {/* hobbies */}
+              <div className="divider"></div>
               <h3 className="font-semibold text-xl text-[#ffb7b5] underline ">
                 Hobbies
               </h3>
-              <div className="divider"></div>
               <p>
-              Aside from all that, on weekends I like to sit back and go through my list of unwatched movies and series or read some books. ^_^
+                Aside from all that, on weekends I like to sit back and go
+                through my list of unwatched movies and series or read some
+                books. ^_^
               </p>
-
 
               {/* <p>
                 I&apos;m open to freelance work right now. Website, web app, or

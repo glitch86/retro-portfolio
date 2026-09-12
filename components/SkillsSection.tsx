@@ -1,60 +1,47 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import { useState } from "react";
 
-const skills = [
-  {
-    label: "FRONTEND",
-    items: "React, TypeScript, Next.js, Tailwind, HTML5/CSS3",
-  },
-  {
-    label: "BACKEND",
-    items: "Java, Node.js, Python, REST APIs, C# / C++",
-  },
-  {
-    label: "DATABASE",
-    items: "PostgreSQL, MySQL, Redis, MongoDB",
-  },
-  {
-    label: "DEVOPS",
-    items: "Docker, Git/GitHub, Vercel, CI/CD",
-  },
-] as const;
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "./ui/select";
+import GravityMode from "./SkillViewModes/GravityMode";
+import CardMode from "./SkillViewModes/CardMode";
 
-const container = {
-  hidden: {},
+type ViewMode = "gravity" | "cards";
+
+
+const headerVariant = {
+  hidden: {
+    opacity: 0,
+    x: -20,
+  },
   show: {
+    opacity: 1,
+    x: 0,
     transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.05,
+      duration: 0.5,
+      ease: [0.22, 1, 0.36, 1],
     },
   },
 };
 
-const cardVariant = {
-  hidden: { opacity: 0, y: 30 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] },
-  },
-};
-
-const headerVariant = {
-  hidden: { opacity: 0, x: -20 },
-  show: {
-    opacity: 1,
-    x: 0,
-    transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
-  },
-};
-
 export default function SkillsSection() {
+  const [viewMode, setViewMode] = useState<ViewMode>("gravity");
+
   return (
     <section
       id="Skills"
       className="py-12 sm:py-14 px-4 sm:px-8 max-w-5xl mx-auto scroll-mt-20 sm:scroll-mt-24"
     >
+      {/* Header */}
       <motion.div
         variants={headerVariant}
         initial="hidden"
@@ -65,34 +52,55 @@ export default function SkillsSection() {
         <h2 className="font-[family-name:var(--font-pixel)] text-base sm:text-lg md:text-xl text-[#ffb7d5] flex items-center gap-2">
           <span>&gt;</span> TECH_STACK.LOG
         </h2>
+
         <p className="font-mono text-[10px] sm:text-xs text-[#8c8c9e] mt-1">
           Tools and frameworks in my daily terminal rotation.
         </p>
       </motion.div>
 
-      {/* 1 col → 2 col → 2 col → 4 col progression */}
-      <motion.div
-        variants={container}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.2 }}
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 font-mono text-xs"
-      >
-        {skills.map(({ label, items }) => (
+      {/* View Mode Selector */}
+      <div className="mb-4 w-48">
+        <Select
+          value={viewMode}
+          onValueChange={(value) => {
+            if (value === "gravity" || value === "cards") {
+              setViewMode(value);
+            }
+          }}
+        >
+          <SelectTrigger>
+            <SelectValue placeholder="Select view mode" />
+          </SelectTrigger>
+
+          <SelectContent className="bg-black ring-pink-300">
+            <SelectGroup>
+              <SelectLabel>View Modes</SelectLabel>
+
+              <SelectItem value="gravity">Gravity</SelectItem>
+
+              <SelectItem value="cards">Cards</SelectItem>
+            </SelectGroup>
+          </SelectContent>
+        </Select>
+      </div>
+
+      {/* View */}
+      <AnimatePresence mode="wait">
+        {viewMode === "gravity" ? (
           <motion.div
-            key={label}
-            variants={cardVariant}
-            whileHover={{ scale: 1.03, borderColor: "#ffb7d5" }}
-            transition={{ type: "spring", stiffness: 280, damping: 22 }}
-            className="border border-[rgba(255,183,213,0.25)] backdrop-blur-2xl p-3 sm:p-4 rounded"
+            key="gravity"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.35 }}
+            className="font-mono text-xs"
           >
-            <span className="font-[family-name:var(--font-pixel)] text-[9px] sm:text-[10px] text-[#ffb7d5] block mb-1.5">
-              {label}
-            </span>
-            <p className="text-[#b5b5c6] text-[11px] sm:text-xs leading-relaxed">{items}</p>
+            <GravityMode></GravityMode>
           </motion.div>
-        ))}
-      </motion.div>
+        ) : (
+          <CardMode></CardMode>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
