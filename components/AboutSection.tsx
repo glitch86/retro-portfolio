@@ -98,7 +98,7 @@ export default function AboutSection() {
             {/* Descripton about self */}
             <motion.div
               variants={fadeUp}
-              className="space-y-2.5 sm:space-y-3 font-mono text-sm sm:text-sm md:text-base text-[#cfcfde] leading-relaxed"
+              className="space-y-2.5 sm:space-y-3 h-80 overflow-auto font-mono text-sm sm:text-sm md:text-base text-[#cfcfde] leading-relaxed"
             >
 
 
