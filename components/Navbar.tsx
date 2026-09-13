@@ -26,7 +26,7 @@ export default function Navbar() {
       >
         {/* Logo */}
         <a
-          href="#hero"
+          href="#Hero"
           className="flex items-center gap-2 group pl-0.5 shrink-0"
         >
           <motion.div
