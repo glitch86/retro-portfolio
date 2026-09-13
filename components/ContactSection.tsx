@@ -1,7 +1,8 @@
 "use client";
 
-import { FormEvent } from "react";
+import { useRef } from "react";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
 
 const container = {
   hidden: {},
@@ -23,17 +24,37 @@ const fadeUp = {
 };
 
 export default function ContactSection() {
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  const form = useRef<HTMLFormElement>(null);
+
+  const handleForm = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    alert("Message transmission simulated! Thanks for reaching out.");
-  }
+
+    if (!form.current) return;
+
+    emailjs
+      .sendForm(
+        "service_9lh4sgs",
+        "template_exi4437",
+        form.current,
+        "LjLj_LmuGHZPxmWC7",
+      )
+      .then(
+        () => {
+          alert("Message sent successfully!");
+          form.current?.reset();
+        },
+        (error) => {
+          alert("Failed to send message");
+          console.log(error);
+        },
+      );
+  };
 
   return (
     <section
       id="Contact"
       className="py-14 sm:py-20 px-4 sm:px-8 max-w-3xl mx-auto scroll-mt-20 sm:scroll-mt-24"
     >
-      
       <motion.div
         initial={{ opacity: 0, y: 48 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -51,7 +72,8 @@ export default function ContactSection() {
         </div>
 
         <motion.form
-          onSubmit={handleSubmit}
+          onSubmit={handleForm}
+          ref={form}
           variants={container}
           initial="hidden"
           whileInView="show"
@@ -69,6 +91,7 @@ export default function ContactSection() {
               </label>
               <input
                 type="text"
+                name="user_name"
                 required
                 placeholder="Jane Doe"
                 className="w-full bg-[#0c0c10] border border-[rgba(255,183,213,0.3)] focus:border-[#ffb7d5] text-[#ffb7d5] placeholder-[#505062] rounded px-3 sm:px-3.5 py-2 sm:py-2.5 font-mono text-sm outline-none transition-colors"
@@ -80,6 +103,7 @@ export default function ContactSection() {
               </label>
               <input
                 type="email"
+                name="user_email"
                 required
                 placeholder="jane@example.com"
                 className="w-full bg-[#0c0c10] border border-[rgba(255,183,213,0.3)] focus:border-[#ffb7d5] text-[#ffb7d5] placeholder-[#505062] rounded px-3 sm:px-3.5 py-2 sm:py-2.5 font-mono text-sm outline-none transition-colors"
@@ -93,8 +117,9 @@ export default function ContactSection() {
             </label>
             <input
               type="text"
+              name="subject"
               required
-              placeholder="New freelance opportunity"
+              placeholder="Aa..."
               className="w-full bg-[#0c0c10] border border-[rgba(255,183,213,0.3)] focus:border-[#ffb7d5] text-[#ffb7d5] placeholder-[#505062] rounded px-3 sm:px-3.5 py-2 sm:py-2.5 font-mono text-sm outline-none transition-colors"
             />
           </motion.div>
@@ -105,8 +130,9 @@ export default function ContactSection() {
             </label>
             <textarea
               rows={5}
+              name="message"
               required
-              placeholder="Tell me about your project, timeline, and tech requirements..."
+              placeholder="Aa..."
               className="w-full bg-[#0c0c10] border border-[rgba(255,183,213,0.3)] focus:border-[#ffb7d5] text-[#ffb7d5] placeholder-[#505062] rounded px-3 sm:px-3.5 py-2 sm:py-2.5 font-mono text-sm outline-none transition-colors resize-none"
             />
           </motion.div>
