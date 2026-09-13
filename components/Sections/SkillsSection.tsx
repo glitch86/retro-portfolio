@@ -11,9 +11,9 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "./ui/select";
-import GravityMode from "./SkillViewModes/GravityMode";
-import CardMode from "./SkillViewModes/CardMode";
+} from "../ui/select";
+import GravityMode from "../SkillViewModes/GravityMode";
+import CardMode from "../SkillViewModes/CardMode";
 
 type ViewMode = "gravity" | "cards";
 

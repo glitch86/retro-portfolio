@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
 import ScrollToTop from "@/components/buttons/ScrollToTop";
+import Navbar from "@/components/Shared/Navbar";
 
 export const metadata: Metadata = {
   title: "Roza // Software Engineer",

@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
-import LetterSwapPingPong from "./fancy/text/letter-swap-pingpong-anim";
 
 export default function Navbar() {
   const [active, setActive] = useState("");

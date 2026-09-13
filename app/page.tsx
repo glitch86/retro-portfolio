@@ -1,13 +1,13 @@
 "use client";
 
-import HudBar from "@/components/HudBar";
-import HeroSection from "@/components/HeroSection";
-import AboutSection from "@/components/AboutSection";
-import SkillsSection from "@/components/SkillsSection";
-import ProjectsSection from "@/components/ProjectsSection";
-import ContactSection from "@/components/ContactSection";
-import Footer from "@/components/Footer";
+import HudBar from "@/components/Shared/HudBar";
+import ProjectsSection from "@/components/Sections/ProjectsSection";
+import ContactSection from "@/components/Sections/ContactSection";
+import Footer from "@/components/Shared/Footer";
 import Particles from "../components/Particles";
+import HeroSection from "@/components/Sections/HeroSection";
+import AboutSection from "@/components/Sections/AboutSection";
+import SkillsSection from "@/components/Sections/SkillsSection";
 
 export default function Home() {
   return (

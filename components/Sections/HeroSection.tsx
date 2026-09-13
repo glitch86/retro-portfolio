@@ -1,8 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import TextType from "./TextType";
-
+import TextType from '../TextType'
 const container = {
   hidden: {},
   show: {
