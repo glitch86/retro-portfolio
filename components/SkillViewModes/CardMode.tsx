@@ -6,6 +6,7 @@ export default function CardMode() {
       label: "LANGUAGES",
       skills: [
         { name: "C++", icon: "https://skillicons.dev/icons?i=cpp" },
+        { name: "C", icon: "https://skillicons.dev/icons?i=c" },
         { name: "C#", icon: "https://skillicons.dev/icons?i=cs" },
         { name: "Python", icon: "https://skillicons.dev/icons?i=python" },
         { name: "PHP", icon: "https://skillicons.dev/icons?i=php" },

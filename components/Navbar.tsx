@@ -76,12 +76,7 @@ export default function Navbar() {
               )}
               <span className="relative z-10">
                 {/* {section.charAt(0).toUpperCase() + section.slice(1)} */}
-                <LetterSwapPingPong
-                  label={section}
-                  staggerFrom={"first"}
-                  reverse={false}
-                  className="font-overused-grotesk font-bold"
-                />
+                {section}
               </span>
             </a>
           ))}

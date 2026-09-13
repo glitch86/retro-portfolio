@@ -12,6 +12,8 @@ const skills = [
     name: "C#",
     icon: "https://skillicons.dev/icons?i=cs",
   },
+  { name: "C", icon: "https://skillicons.dev/icons?i=c" },
+
   {
     name: "Python",
     icon: "https://skillicons.dev/icons?i=python",
