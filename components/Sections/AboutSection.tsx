@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Separator } from "./ui/separator";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
